@@ -13,6 +13,8 @@ public record DatosRegistroMedico(
 		@NotBlank
 		@Email
 		String email, 
+		@NotBlank 
+		String telefono,
 		@NotBlank
 		@Pattern(regexp = "\\d{4,6}")
 		String documento, 
