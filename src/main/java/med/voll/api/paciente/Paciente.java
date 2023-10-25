@@ -30,3 +30,6 @@ public class Paciente {
 
 }
 //se agraga nuevo campo en la base de datos mediante FLyway
+//se crea la entidad paciente con sus funciones de persistencia 
+//se hace una migracion para crear altabla pacientes en la base de datos
+//controler de paciente creado con sus respectivas validaciones 
