@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import med.voll.api.direccion.DatosDireccion;
 import med.voll.api.direccion.Direccion;
 
 @Table(name="medicos")
@@ -37,6 +37,7 @@ public class Medico {
 	
 	
 	public Medico(DatosRegistroMedico datosRegistroMedico) {
+		
 		this.nombre = datosRegistroMedico.nombre();
 		this.email = datosRegistroMedico.email();
 		this.telefono = datosRegistroMedico.telefono();
@@ -44,6 +45,26 @@ public class Medico {
 		this.especialidad = datosRegistroMedico.especialidad();
 		this.direccion = new Direccion(datosRegistroMedico.direccion());
 	}
+
+
+	public void actualizarMedico(DatosAcualizarMedico datosActualizarMedico) {
+	
+		if (datosActualizarMedico.nombre() != null) {
+			this.nombre = datosActualizarMedico.nombre();
+		}
+		if (datosActualizarMedico.documento() != null) {
+			
+			this.documento = datosActualizarMedico.documento();
+		}
+		if(datosActualizarMedico.datosdirecion() != null) {
+			
+			this.direccion = direccion.actualizarDatos(datosActualizarMedico.datosdirecion());
+		}
+		
+		
+	}
+	
+	
 
 	
 

@@ -26,5 +26,17 @@ public class Direccion {
 		this.distrito = direccion.distrito();
 		this.ciudad = direccion.ciudad();
 	}
+
+
+
+	public Direccion actualizarDatos(DatosDireccion datosdirecion) {
+		this.calle = datosdirecion.calle();
+		this.numero = datosdirecion.numero();
+		this.complemento = datosdirecion.complemento();
+		this.distrito = datosdirecion.distrito();
+		this.ciudad = datosdirecion.ciudad();
+		return this;
+		
+	}
 	
 }
