@@ -26,6 +26,7 @@ public class Medico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private boolean activo;
 	private String nombre;
 	private String email;
 	private String telefono;
@@ -37,7 +38,7 @@ public class Medico {
 	
 	
 	public Medico(DatosRegistroMedico datosRegistroMedico) {
-		
+		this.activo = true;
 		this.nombre = datosRegistroMedico.nombre();
 		this.email = datosRegistroMedico.email();
 		this.telefono = datosRegistroMedico.telefono();
@@ -62,6 +63,11 @@ public class Medico {
 		}
 		
 		
+	}
+
+
+	public void desacativarMedico(Medico medico) {
+		this.activo = false;
 	}
 	
 	
