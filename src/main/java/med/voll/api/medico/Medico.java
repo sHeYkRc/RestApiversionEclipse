@@ -66,7 +66,7 @@ public class Medico {
 	}
 
 
-	public void desacativarMedico(Medico medico) {
+	public void desacativarMedico() {
 		this.activo = false;
 	}
 	
